@@ -10,7 +10,7 @@ services:
     networks:
       - es7net
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.1.0
+    image: kibana:7.1.0
     container_name: kibana7
     environment:
       - I18N_LOCALE=zh-CN
@@ -22,7 +22,7 @@ services:
     networks:
       - es7net
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
+    image: elasticsearch:7.1.0
     container_name: es7_01
     environment:
       - cluster.name=geektime
@@ -42,7 +42,7 @@ services:
     networks:
       - es7net
   elasticsearch2:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
+    image: elasticsearch:7.1.0
     container_name: es7_02
     environment:
       - cluster.name=geektime
